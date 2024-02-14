@@ -1,11 +1,10 @@
 import './styles/App.css';
+import Account from './pages/Account';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-
-      </header>
+      <Account />
     </div>
   );
 }

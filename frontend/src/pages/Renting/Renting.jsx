@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Renting() {
+const Renting = () => {
   return (
-    <div>Renting</div>
+    <div>Udlejning</div>
   )
 }
 

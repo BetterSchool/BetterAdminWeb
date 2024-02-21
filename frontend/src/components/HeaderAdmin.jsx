@@ -1,15 +1,16 @@
 import React from 'react'
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link,
+// } from "react-router-dom";
+
 
 function HeaderAdmin() {
     return (
         <>
-          <nav>
-            <ul>
-              <li><a href='/'>Forside</a></li>
-              <li><a href='/Renting'>Udlejning</a></li>
-              <li><a href='#'>Kontoer</a></li>
-            </ul>
-          </nav>
+
         </>
     )
 }

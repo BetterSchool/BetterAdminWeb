@@ -6,10 +6,12 @@ import {
   Link,
 } from "react-router-dom";
 
-//#region Page import
-import Home from '../pages/Home';
+//#region
+
 import Renting from '../pages/Renting';
 import Login from '../pages/Login';
+import Home from '../pages/Home';
+
 //#endregion
 
 

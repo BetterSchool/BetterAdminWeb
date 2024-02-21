@@ -1,8 +1,8 @@
-// import Header from './components/Header/Header';
-import Home from './pages/Home';
-import Renting from './pages/Renting/Renting';
-import './styles/App.css';
 
+import Header from './components/Header';
+import Home from './pages/Home';
+import Renting from './pages/Renting';
+import './styles/App.css';
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,15 +10,15 @@ import {
 } from "react-router-dom";
 
 
+
 function App() {
   return (
     <>
-      {/* <Header/> */}
+    <Header/>
       <Router>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/' element={<Renting/>}/>
-
+          <Route path='/Renting' element={<Renting/>}/>
         </Routes>
       </Router>
     </>

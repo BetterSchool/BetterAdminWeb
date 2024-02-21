@@ -37,7 +37,6 @@ function Header(){
           <Route path='/' element={<Home/>}/>
           <Route path='/Renting' element={<Renting/>}/>
           <Route path='/Login' element={<Login/>}/>
-
         </Routes>
       </Router>
     </>

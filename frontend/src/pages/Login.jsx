@@ -58,7 +58,7 @@ const Login = () => {
             </div>
 
             <div className="text-sm leading-6">
-              <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+              <a href="/" className="font-semibold text-indigo-600 hover:text-indigo-500">
                 Glemt kodeordet?
               </a>
             </div>

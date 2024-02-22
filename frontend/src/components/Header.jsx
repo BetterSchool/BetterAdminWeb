@@ -6,13 +6,11 @@ import {
   Link,
 } from "react-router-dom";
 
-//#region
 
 import Renting from '../pages/Renting';
 import Login from '../pages/Login';
 import Home from '../pages/Home';
-
-//#endregion
+import ErrorPage from '../pages/ErrorPage';
 
 
 const navigation =[
@@ -21,8 +19,6 @@ const navigation =[
   {title: 'Hold', href: '/Enrollment'},
   {title: 'Login', href: '/Login'},
 ]
-
-
 
 
 function Header(){
@@ -39,6 +35,7 @@ function Header(){
           <Route path='/' element={<Home/>}/>
           <Route path='/Renting' element={<Renting/>}/>
           <Route path='/Login' element={<Login/>}/>
+          <Route path='*' element={<ErrorPage/>}/>
         </Routes>
       </Router>
     </>

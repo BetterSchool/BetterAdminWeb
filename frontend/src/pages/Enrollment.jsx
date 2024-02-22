@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Enrollment() {
+const Enrollment = () => {
   return (
     <div>Enrollment</div>
   )
 }
 
-export default Enrollment
+export default Enrollment 

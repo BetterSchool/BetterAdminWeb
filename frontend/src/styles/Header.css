@@ -1,0 +1,13 @@
+.nav{
+    height: 50px;
+    width: 100%;
+    background-color: red;
+}
+.nav .ul{
+    height: 100%;
+    width: 50%;
+    background-color: aqua;
+}
+.nav .ul .li{
+    background-color: blue;
+}

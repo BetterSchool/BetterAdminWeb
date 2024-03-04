@@ -1,3 +1,5 @@
+import '../styles/Header.css';
+
 import React from 'react'
 import {
   BrowserRouter as Router,
@@ -17,7 +19,6 @@ const navigation =[
   {title: 'Forside', href: '/'},
   {title: 'Udlejning', href: '/Renting'},
   {title: 'Hold', href: '/Enrollment'},
-  {title: 'Login', href: '/Login'},
 ]
 
 
@@ -26,15 +27,21 @@ function Header(){
     <>
       <Router>
         {/* Link bliver brug til navigation på siden */}
-        {navigation.map((item) =>(
-        <Link to={item.href}>{item.title}</Link>        
-        ))}
+      <nav className='nav'>
+        <ul className='ul'>
+          {navigation.map((item) =>(
+          <Link className='li' to={item.href}>{item.title}</Link>        
+          ))}
+        </ul>
+      </nav>
 
         <Routes>
         {/* Route tjekker hvilket URL du er på, hvis du er på URL'en "/" vil den vise den component som høre til, i dette tilfælde Home */}
           <Route path='/' element={<Home/>}/>
           <Route path='/Renting' element={<Renting/>}/>
           <Route path='/Login' element={<Login/>}/>
+          
+          {/*404 Side */}
           <Route path='*' element={<ErrorPage/>}/>
         </Routes>
       </Router>

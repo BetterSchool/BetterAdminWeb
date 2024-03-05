@@ -1,0 +1,13 @@
+.container{
+    height: 500px;
+    width: 70%;
+    background-color: brown;
+}
+.profile{
+    height: 100px;
+    width: 250px;
+    background-color: aliceblue;
+}
+.test{
+    font-size: large;
+}

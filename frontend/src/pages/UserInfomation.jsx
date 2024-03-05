@@ -1,33 +1,30 @@
 import React from 'react'
+import UserGuardian from '../components/UserInfomation/UserGuardian';
+import UserPupil from '../components/UserInfomation/UserPupil';
 
 
-/* 
-Fornavn
-Efternavn
-Tlf.nr
-email
---
-Elev:
-Mobil nr.
-Fødselsdag
-Køn
-Start Dato
-Note
-Skole
-Karakter
-----
-Værge:
-Arbejds nr.
-----
-Lære
-Timer
-----
-*/
 
-export default function UserInfomation({FirstName, Lastname, Phonenr, emil}) {
-  return (
-    <div className='Container'>
-        <h5></h5>
-    </div>
-  )
+const IsStudent = true;
+const IsGuardian = false;
+
+const Person = {
+  Firstname: "Tom",
+  LastName: "Cook",
+  PhoneNr: "123456789",
+  Email: "BetterAdmin@coolsite.dk",
+}
+
+
+export default function UserInfomation() {
+<>
+<h1>Hej</h1>
+</>
+  if (IsStudent === true) {
+    return(
+      <UserPupil FirstName={Person.Firstname} LastName={Person.LastName} PhoneNr={Person.PhoneNr} Email={Person.Email}/>
+    )
+  }
+  if (IsGuardian === false) {
+    <UserGuardian/>
+  }
 }

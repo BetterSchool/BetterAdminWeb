@@ -7,12 +7,14 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+
 import Home from '../pages/Home';
 import Renting from '../pages/Renting';
 import Login from '../pages/Login';
 import UserInfomation from '../pages/UserInfomation';
 import ErrorPage from '../pages/ErrorPage';
-import PaymentHistory from './PaymentHistory';
+import PaymentHistory from './UserInfomation/Pupil/PaymentHistory';
+import SchoolSettings from './UserInfomation/Pupil/SchoolSettings';
 
 const user = {
   name: 'Tom Cook',
@@ -26,7 +28,7 @@ const navigation = [
   { name: 'Hold', href: '/Enrollment', current: false },
 ]
 const userNavigation = [
-  { name: 'Mine oplysninger', href: '/userSettings' },
+  { name: 'Mine oplysninger', href: '/UserSettings' },
   { name: 'Settings', href: '#' },
   { name: 'Sign out', href: '#' },
 ]
@@ -36,7 +38,7 @@ function classNames(...classes) {
 }
 
 
-function Header(){
+export default function Header(){
   return (
     <>
       <Router>
@@ -209,9 +211,9 @@ function Header(){
                 <Route path='/' element={<Home/>}/>
                 <Route path='/Renting' element={<Renting/>}/>
                 <Route path='/Login' element={<Login/>}/>
-                <Route path='/userSettings' element={<UserInfomation/>}/>
+                <Route path='/UserSettings' element={<UserInfomation/>}/>
                 <Route path='/PaymentHistory' element={<PaymentHistory/>}/>
-                <Route path='/School' element={<></>}/>
+                <Route path='/SchoolSettings' element={<SchoolSettings/>}/>
                 {/*404 Side */}
                 <Route path='*' element={<ErrorPage/>}/>
               </Routes>}
@@ -223,5 +225,3 @@ function Header(){
     </>
   )
 }
-
-export default Header;

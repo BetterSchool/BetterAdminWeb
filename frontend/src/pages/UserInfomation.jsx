@@ -1,6 +1,6 @@
 import React from 'react'
-import UserGuardian from '../components/UserInfomation/UserGuardian';
-import UserPupil from '../components/UserInfomation/UserPupil';
+import UserGuardian from '../components/UserInfomation/Guardian/UserGuardian';
+import UserPupil from '../components/UserInfomation/Pupil/UserPupil';
 
 
 
@@ -16,12 +16,9 @@ const Person = {
 
 
 export default function UserInfomation() {
-<>
-<h1>Hej</h1>
-</>
   if (IsStudent === true) {
     return(
-      <UserPupil FirstName={Person.Firstname} LastName={Person.LastName} PhoneNr={Person.PhoneNr} Email={Person.Email}/>
+        <UserPupil FirstName={Person.Firstname} LastName={Person.LastName} PhoneNr={Person.PhoneNr} Email={Person.Email}/>
     )
   }
   if (IsGuardian === false) {

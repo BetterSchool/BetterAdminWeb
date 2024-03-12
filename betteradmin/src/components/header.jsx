@@ -9,9 +9,9 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'Forside', href: '/', current: true },
-  { name: 'Udlej', href: 'renting/', current: false },
-  { name: 'Skema', href: 'calender/', current: false },
+  { name: 'Forside', href: '#', current: true },
+  { name: 'Udlej', href: '#', current: false },
+  { name: 'Skema', href: '#', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -23,10 +23,17 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-
-export default function Home() {
+export default function Header() {
   return (
     <>
+      {/*
+        This example requires updating your template:
+
+        ```
+        <html class="h-full bg-gray-100">
+        <body class="h-full">
+        ```
+      */}
       <div className="min-h-full">
         <div className="bg-gray-800 pb-32">
           <Disclosure as="nav" className="bg-gray-800">
@@ -190,11 +197,7 @@ export default function Home() {
 
         <main className="-mt-32">
           <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
-            <div className="rounded-lg bg-white px-5 py-6 shadow sm:px-6">
-            {
-              <h2>Hej emd dig </h2>            
-            }
-            </div>
+            <div className="rounded-lg bg-white px-5 py-6 shadow sm:px-6">{/* Your content */}</div>
           </div>
         </main>
       </div>

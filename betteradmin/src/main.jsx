@@ -48,27 +48,9 @@ const router = createBrowserRouter([
   },
 ]);
 
-export default function Header() {
-  return (
-    <nav>
-        <ul>
-        {/* <Link to={"/"}>Forside</Link>
-          <Link to={"renting/"}>Udlejninger</Link>
-          <Link to={"calender/"}>Skema</Link>
-          <Link to={"/"}>Forside</Link> */}
-            <li><a href="/">Forside</a></li>
-            <li><a href="renting">Udlejning</a></li>
-            <li><a href="calender">Skema</a></li>
-            <li><a href="/">Min konto</a></li>
-        </ul>
-    </nav>
-  )
-}
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Header/>
     <RouterProvider router={router} />
   </React.StrictMode>,
 )

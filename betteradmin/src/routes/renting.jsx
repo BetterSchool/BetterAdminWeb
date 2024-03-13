@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Instrument } from '../JSON/Instruments'
+import {useState as e} from 'react';
 
 
 const user = {
@@ -210,55 +211,55 @@ export default function Renting() {
 const RentingForm = () => {
   const [firstname, setFirstname] = useState('')
   const [lastname, setLastname] = useState('')
+  const [setInstrument] = useState('')
 
+  const handleFirstname = (e) => {
+    setFirstname(e.target.value)
+    console.log(e.target.value)
+  }
+
+  const handleLastName = (e) => {
+    setLastname(e.target.value)
+    console.log(e.target.value)
+  }
   const handleSubmit = (e) =>{
     e.PreventDefault()
     console.log(firstname, lastname)
   }
+  const handleInstrument = (e) =>{
+    setInstrument(e.target.value)
+    console.log(e.target.value)
 
+  }
   return(
   <form onSubmit={handleSubmit}>
     <div>
       <label htmlFor="firstname">Fornavn:</label>
-      <input type="text" id='firstname' className='' value={firstname} onChange={e => setFirstname(e.target.firstname)}/>
+      <br/>
+      <input type="text" id='firstname' className='' value={firstname} onChange={handleFirstname}/>
     </div>
     <div>
       <label htmlFor="lastname">Efternavn:</label>
-      <input type="text" id='lastname' className='' value={lastname} onChange={e => setLastname(e.target.lastname)}/>
+      <br/>
+      <input type="text" id='lastname' className='' value={lastname} onChange={handleLastName}/>
     </div>
     <div>
       <label htmlFor="instument">Vælg det instument der skal udlejes:</label>
-      <select name='instument'>        
+      <br/>
+      <select id='instrumentPrice' name='instument' onChange={handleInstrument}>        
             {Instrument.map((item) => (
-            <option value={item.price} key={""}>
+            <option value={item.name} key={item.id}>
                 {item.name}
             </option>
             ))}
       </select>
     </div>
     <div>
-      <label htmlFor="price">Pris:</label>
-      <input type="text" id='price' className='' placeholder={Instrument.price} disabled />
+      <label>Pris:</label>
+        <br/>
+      <label htmlFor='instrumentPrice'></label>
     </div>
     <button type='submit'> Lej </button>
   </form>       
   )
 }
-
-
-
-// {navigation.map((item) => (
-//   <a
-//     key={item.name}
-//     href={item.href}
-//     className={classNames(
-//       item.current
-//         ? 'bg-gray-900 text-white'
-//         : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-//       'rounded-md px-3 py-2 text-sm font-medium'
-//     )}
-//     aria-current={item.current ? 'page' : undefined}
-//   >
-//     {item.name}
-//   </a>
-// ))}

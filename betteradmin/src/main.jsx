@@ -7,9 +7,7 @@ import Home from "./Pages/Home";
 import Login from "./Pages/login";
 import Renting from "./Pages/renting";
 import Calender from "./Pages/calender";
-import Dashboard from "./components/Dashboard/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Logout from "./Pages/logout";
 
 
 
@@ -22,7 +20,7 @@ const router = createBrowserRouter([
     element:<ProtectedRoute/>,
     children:[
       {
-        path:"home/",
+        path:"user/",
         element: <Header/>,
         children:[
           {
@@ -42,45 +40,6 @@ const router = createBrowserRouter([
     ]
   }
 ])
-
-
-// const router = createBrowserRouter([
-//   {
-//     path: "login/",
-//     element: <Login />,
-//   },
-//   {
-//     path: "logout/",
-//     element: <Logout />,
-//   },
-//   {
-//     path: "/",
-//     element: <Header />,
-//     children: [
-//       {
-//         element: <ProtectedRoute />,
-//         children: [
-//           {
-//             path: "dashboard/",
-//             element: <Dashboard />,
-//           },
-//         ],
-//       },
-//       {
-//         path: "/",
-//         element: <Home />,
-//       },
-//       {
-//         path: "Retning/",
-//         element: <Renting />,
-//       },
-//       {
-//         path: "/",
-//         element: <Calender />,
-//       },
-//     ],
-//   },
-// ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <KindeProvider

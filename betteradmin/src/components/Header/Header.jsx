@@ -2,7 +2,8 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 const navigation = [
   { name: "Forside", href: "home/", current: true },
@@ -15,6 +16,7 @@ function classNames(...classes) {
 }
 
 export default function Header() {
+  
   const { logout } = useKindeAuth();
     return (
       <Disclosure as='nav' className='bg-gray-800'>
@@ -44,8 +46,6 @@ export default function Header() {
                   </div>
                   <div className='hidden sm:ml-6 sm:block'>
                     <div className='flex space-x-4'>
-                      <Routes>
-                        <Route>
                           {navigation.map((item) => (
                             <Link
                               key={item.name}
@@ -61,8 +61,6 @@ export default function Header() {
                               {item.name}
                             </Link>
                           ))}
-                        </Route>
-                      </Routes>
                     </div>
                   </div>
                 </div>

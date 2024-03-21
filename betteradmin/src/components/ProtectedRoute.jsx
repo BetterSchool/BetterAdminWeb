@@ -10,7 +10,7 @@ export default function ProtectedRoute() {
   if (!isLoading && !isAuthenticated) {
     return (
       <div>
-        <h1 className='text-3xl font-medium'>Not authenticated</h1>
+        <h1 className='text-3xl font-medium'>Du er ikke logget ind!</h1>
         <button
           onClick={() => login()}
           className='bg-zinc-900 text-white px-3 py-2 rounded'
@@ -21,6 +21,7 @@ export default function ProtectedRoute() {
     );
   }
   if (!isLoading && isAuthenticated) {
+    
     return <Outlet />;
   }
 }

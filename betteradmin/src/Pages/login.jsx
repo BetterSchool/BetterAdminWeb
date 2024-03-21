@@ -1,18 +1,15 @@
-import { useAuth0 } from "@auth0/auth0-react";
+import {useKindeAuth} from '@kinde-oss/kinde-auth-react';
 
 export default function Login() {
-  const { loginWithRedirect, isAuthenticated } = useAuth0();
+  const { login, isAuthenticated,  register } = useKindeAuth();
   if (!isAuthenticated) {
     return (
       <>
-        <form>
-          <label>
-            Brugernavn:
-            <input></input>
-          </label>
-          <button onClick={() => loginWithRedirect}>Login</button>
-        </form>
+        <button onClick={register} type="button">Sign up</button>
+        <button onClick={login} type="button">Sign In</button>
+        
       </>
     );
   }
+  
 }

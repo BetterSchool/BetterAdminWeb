@@ -11,50 +11,83 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Logout from "./Pages/logout";
 
+
+
 const router = createBrowserRouter([
   {
-    path: "login/",
-    element: <Login />,
-  },
-  {
-    path: "logout/",
-    element: <Logout />,
-  },
-  {
     path: "/",
-    element: <Header />,
-    children: [
-      {
-        element: <ProtectedRoute />,
-        children: [
-          {
-            path: "dashboard/",
-            element: <Dashboard />,
-          },
-        ],
-      },
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "Retning/",
-        element: <Renting />,
-      },
-      {
-        path: "/",
-        element: <Calender />,
-      },
-    ],
+    element: <Login/>
   },
-]);
+  {
+    element:<ProtectedRoute/>,
+    children:[
+      {
+        path:"home/",
+        element: <Header/>,
+        children:[
+          {
+            path:"home/",
+            element:<Home/>
+          },
+          {
+            path:"calender/",
+            element:<Calender/>
+          },
+          {
+            path:"renting/",
+            element:<Renting/>
+          }
+        ]
+      }
+    ]
+  }
+])
+
+
+// const router = createBrowserRouter([
+//   {
+//     path: "login/",
+//     element: <Login />,
+//   },
+//   {
+//     path: "logout/",
+//     element: <Logout />,
+//   },
+//   {
+//     path: "/",
+//     element: <Header />,
+//     children: [
+//       {
+//         element: <ProtectedRoute />,
+//         children: [
+//           {
+//             path: "dashboard/",
+//             element: <Dashboard />,
+//           },
+//         ],
+//       },
+//       {
+//         path: "/",
+//         element: <Home />,
+//       },
+//       {
+//         path: "Retning/",
+//         element: <Renting />,
+//       },
+//       {
+//         path: "/",
+//         element: <Calender />,
+//       },
+//     ],
+//   },
+// ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <KindeProvider
     clientId='24b80be83e0d431e88a3221660fe5ce5'
     domain='https://betteradmin.kinde.com'
-    redirectUri='http://localhost:5173/home/'
-    logoutUri='http://localhost:5173/logout/'
+    redirectUri='http://localhost:5173'
+    logoutUri='http://localhost:5173'
   >
     <RouterProvider router={router} />
   </KindeProvider>

@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 
 const navigation = [
@@ -19,6 +19,7 @@ export default function Header() {
   
   const { logout } = useKindeAuth();
     return (
+      <>
       <Disclosure as='nav' className='bg-gray-800'>
         {({ open }) => (
           <>
@@ -167,5 +168,7 @@ export default function Header() {
           </>
         )}
       </Disclosure>
+       <Outlet/>
+      </>
     );
 }

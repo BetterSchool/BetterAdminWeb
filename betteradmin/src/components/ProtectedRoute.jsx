@@ -21,7 +21,7 @@ export default function ProtectedRoute() {
     );
   }
   if (!isLoading && isAuthenticated) {
-    
-    return <Outlet />;
+    return  (<Outlet /> );
   }
+
 }

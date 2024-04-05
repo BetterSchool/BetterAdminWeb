@@ -8,6 +8,7 @@ import Renting from "./Pages/renting";
 import Calender from "./Pages/calender";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Header from "./components/Header/Header";
+import Profile from "./Pages/profile";
 
 
 
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
           {
             path:"renting/",
             element:<Renting/>
+          },
+          {
+            path:"profile/",
+            element:<Profile/>
           }
         ]
       }

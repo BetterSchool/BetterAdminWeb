@@ -11,5 +11,13 @@ export default function Login() {
       </div>
     );
   }
+  if (isAuthenticated) {
+    return (
+      <>
+        <h1>Det lader du du er logget ind.</h1>
+        <span>Kom til <a className='font-semibold' href='/user/home/'>forsiden</a> her</span>
+      </>
+    );
+  }
   
 }

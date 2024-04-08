@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { KindeProvider } from "@kinde-oss/kinde-auth-react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { StrictMode } from "react";
 
 import Home from "./Pages/Home";
 import Login from "./Pages/login";
@@ -9,6 +10,7 @@ import Calender from "./Pages/calender";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Header from "./components/Header/Header";
 import Profile from "./Pages/profile";
+import Register from "./Pages/Account/register";
 
 
 
@@ -16,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Login/>
+  },
+  {
+    path:"register/",
+    element:<Register/>
   },
   {
     element:<ProtectedRoute/>,
@@ -47,6 +53,7 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
+  <StrictMode>
     <KindeProvider
       clientId='24b80be83e0d431e88a3221660fe5ce5'
       domain='https://betteradmin.kinde.com'
@@ -55,4 +62,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       >
     <RouterProvider router={router} />
     </KindeProvider>
+
+  </StrictMode>
 );

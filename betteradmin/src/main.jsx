@@ -11,6 +11,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Header from "./components/Header/Header";
 import Profile from "./Pages/profile";
 import Register from "./Pages/Account/register";
+import Loginform from "./components/loginform";
 
 
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path:"register/",
     element:<Register/>
+  },
+  {
+    path:"login/",
+    element:<Loginform/>
   },
   {
     element:<ProtectedRoute/>,

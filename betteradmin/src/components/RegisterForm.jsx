@@ -86,7 +86,7 @@ export default function RegisterForm() {
                     onChange={handleFirstName}
                     value={firstname}
                     type="text"   
-                    required={true} 
+                    required
                 />
             </>
             <>
@@ -94,7 +94,8 @@ export default function RegisterForm() {
                 <input 
                     onChange={handleLastName}
                     value={lastname}
-                    type="text"    
+                    type="text"  
+                    required  
                 />
             </>
             <>
@@ -102,7 +103,8 @@ export default function RegisterForm() {
                 <input 
                     onChange={handleEmail}
                     value={email}
-                    type="email"    
+                    type="email"   
+                    required 
                 />
             </>
             <>
@@ -111,6 +113,7 @@ export default function RegisterForm() {
                     onChange={handlePassword}
                     value={password}
                     type="text"    
+                    required
                 />
             </>
             <button onClick={handleSubmit} type="submit">

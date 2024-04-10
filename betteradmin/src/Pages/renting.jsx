@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {useKindeAuth} from "@kinde-oss/kinde-auth-react";
-import { Instrument } from "../JSON/Instruments";
+import { Instrument } from "../Data/InstrumentData";
 
 export default function Renting() {
   const [setFirstname] = useState("");

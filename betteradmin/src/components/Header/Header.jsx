@@ -7,6 +7,7 @@ import { Link, Outlet } from "react-router-dom";
 
 const navigation = [
   { name: "Forside", href: "home/", current: true },
+  { name: "Dashboard", href: "Dashboard/", current: true },
   { name: "Skema", href: "calender/", current: false },
   { name: "Udlejning", href: "renting/", current: false },
 ];

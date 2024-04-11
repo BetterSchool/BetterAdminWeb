@@ -12,6 +12,7 @@ import Header from "./components/Header/Header";
 import Profile from "./Pages/profile";
 import Register from "./Pages/Account/register";
 import Loginform from "./components/loginform";
+import Dashboard from "./Pages/Dashboard";
 
 
 
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
           {
             path:"home/",
             element:<Home/>
+          },
+          {
+            path:"Dashboard/",
+            element:<Dashboard/>
           },
           {
             path:"calender/",

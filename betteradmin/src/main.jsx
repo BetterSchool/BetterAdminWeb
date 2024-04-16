@@ -11,7 +11,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Header from "./components/Header/Header";
 import Profile from "./Pages/profile";
 import Register from "./Pages/Account/Register/register";
-import Dashboard from "./Pages/Dashboard";
+import Dashboard from "./Pages/Account/Dashboard/Dashboard";
 import LoginPage from "./Pages/Account/Login/login";
 
 

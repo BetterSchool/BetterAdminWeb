@@ -10,7 +10,7 @@ import Calender from "./Pages/calender";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Header from "./components/Header/Header";
 import Profile from "./Pages/profile";
-import Register from "./Pages/Account/register";
+import Register from "./Pages/Account/Register/register";
 import Loginform from "./components/loginform";
 import Dashboard from "./Pages/Dashboard";
 

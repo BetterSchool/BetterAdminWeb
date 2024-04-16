@@ -72,8 +72,10 @@ export default function RegisterForm() {
             Oprettelse af ny konto
           </h2>
         </div>
-        {errorMessage()}
-        {successMessage()}
+            <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
+            {errorMessage()}
+            {successMessage()}
+            </div>
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
           <div className="bg-white px-6 py-12 shadow sm:rounded-lg sm:px-12">
             <form className="space-y-6">

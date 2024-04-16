@@ -1,35 +1,37 @@
-{
-    "id" : 1,
-    "image": "",
-    "rented": false,
-    "name":"Klaver",
-    "price": 90
-}
-{
-    "id" : 2,
-    "image": "",
-    "rented": true,
-    "name":"Trommer",
-    "price": 100
-}
-{
-    "id" : 3,
-    "image": "",
-    "rented": false,
-    "name":"Violin",
-    "price": 50
-}
-{
-    "id" : 4,
-    "image": "",
-    "rented": false,
-    "name":"Guitar",
-    "price": 900
-}
-{
-    "id" : 5,
-    "image": "",
-    "rented": false,
-    "name":"Bas",
-    "price": 30
-}
+[
+    {
+        "id" :1,
+        "image" :"",
+        "rented" :false,
+        "name" :"Klaver",
+        "price" :90
+     },
+    {
+        "id" :2,
+        "image" :"",
+        "rented" :true,
+        "name" :"Trommer",
+        "price" : 100
+    },
+    {
+        "id" :3,
+        "image" :"",
+        "rented" :false,
+        "name" :"Violin",
+        "price" :50
+    },
+    {
+        "id" : 4,
+        "image" :"",
+        "rented" :false,
+        "name" :"Guitar",
+        "price" :900
+    },
+    {
+        "id" :5,
+        "image" :"",
+        "rented" :false,
+        "name" :"Bas",
+        "price" :30
+    }
+]
